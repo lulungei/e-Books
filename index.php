@@ -9,7 +9,8 @@
 
 <body >
 <header>
-<a href= "login.php" Login></a>
+
+<a href= "login.php">Login</a>
 </header>
 <section>
 <h1> Books<h2>
@@ -18,7 +19,7 @@ wisest of counselors, and the most patient of teachers."</p>
 
 <p>-Charles William Elliot</p>
 
-<form class="col-sm-6" method="POST">
+<form class="col-sm-6 auth-form">
                         <h3>New User</h3>
                         <div class="form-group">
                             <label>Name</label>
