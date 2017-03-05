@@ -1,5 +1,5 @@
 header{
-	background-color: lightgrey;
+	background-color: silver;
 	width: 100%;
 	height: 100px;
 	float: left;
@@ -8,20 +8,25 @@ header{
 }
 nav{
     background-color:white;
-	width: 10%;
-	height: 500px;
+	width: 100%;
+	height: 100px;
 	float: left;
     font-size: 20px;
     text-align:left;
-    
 
 
 
+}
+aside{
+	width: 30%;
+	height: 600px;
+	float: right;
 }
 body{
             background-color:white;
             background-size: cover;
             background-repeat: no-repeat;
+            margin: 0;
            
             
                   
@@ -41,10 +46,12 @@ body{
        }
 
        section{
-           height: 100px;
-           width: 100%;
-           float: left;
-           text-align: center;
+           
+           height:100%;
+           width:70%;
+          float:left;
+           
+        
 
 
        }
@@ -54,7 +61,7 @@ body{
     margin-right: auto;
     border: 1px solid black;
     padding: 20px;
-    background-image: url("images/books.jpg");
+    background-color: rosybrown;
 }
 
 .dropbtn {
@@ -94,7 +101,7 @@ body{
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color: silver;
 }
 input[type=text] {
     width: 300px;
@@ -107,20 +114,27 @@ input[type=text] {
     background-position: 10px 10px; 
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
+    -webkit-transition: width 4s ease-in-out;
+    transition: width 4s ease-in-out;
 }
 
 input[type=text]:focus {
     width: 100%;
 }
-* {box-sizing:border-box}
+* {box-sizing:border-box;
+}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
   position: relative;
-  margin: auto;
+  margin:auto;
+  max-width: 100%
+  
+}
+.slideshow-container img {
+   width: 100%;
+   height: 700px; 
+   
 }
 
 .mySlides {
@@ -205,5 +219,10 @@ input[type=text]:focus {
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
+}
+.slideshow-container image {
+   width: 100%;
+   height: 100px; /* experiment till you're satisfied */
+   
 }
        
