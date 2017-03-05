@@ -2,8 +2,7 @@
 <html>
 <head>
 <title>e-Books</title>
-<link href="styles.css" rel="stylesheet"/> 
-<link href="style.js" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"> 
 </head>
 
 <body>
@@ -19,7 +18,6 @@
   <button class="dropbtn">Cart</button>
   <div class="dropdown-content">
     <a href="#">Show contents</a>
-    
   </div>
 </div>
 </header>
@@ -28,34 +26,31 @@
 <br/>
 <br/>
 <nav>
-<div class="dropdown">
-  <button class="dropbtn">Home</button>
+  <div class="dropdown">
+    <button class="dropbtn">Home</button>
   </div>
-</div>
-</br>
-</br>
-<div class="dropdown">
-  <button class="dropbtn">Genre</button>
-  <div class="dropdown-content">
-    <a href="#">Thriller</a>
-    <a href="#">Romance</a>
-    <a href="#">Biography</a>
-    <a href="#">Drama</a>
-    
+  </br>
+  </br>
+  <div class="dropdown">
+    <button class="dropbtn">Genre</button>
+    <div class="dropdown-content">
+      <a href="#">Thriller</a>
+      <a href="#">Romance</a>
+      <a href="#">Biography</a>
+      <a href="#">Drama</a>
+    </div>
   </div>
-</div>
-</br>
-</br>
-<div class="dropdown">
-  <button class="dropbtn">Bestsellers</button>
-  <div class="dropdown-content">
-    <a href="#">If Tomorrow Comes</a>
-    <a href="#">The Way of The Shadows</a>
-    <a href="#">A Stranger In The Mirror</a>
-    <a href="#">Nelson Mandela</a>
-    
+  </br>
+  </br>
+  <div class="dropdown">
+    <button class="dropbtn">Bestsellers</button>
+    <div class="dropdown-content">
+      <a href="#">If Tomorrow Comes</a>
+      <a href="#">The Way of The Shadows</a>
+      <a href="#">A Stranger In The Mirror</a>
+      <a href="#">Nelson Mandela</a>
+    </div>
   </div>
-</div>
 </nav>
 
 <div class="slideshow-container">
@@ -99,7 +94,7 @@
 
 
 
-
+<script src="style.js" type="text/javascript"></script>
 </body>
 
 </html>
