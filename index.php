@@ -5,7 +5,26 @@
        
     <title>e-Books</title>  
     <link href="styles.css" rel="stylesheet"> 
-    <link href="validate.js" rel="stylesheet">  
+     <script src="validate.js" type="text/javascript"></script>
+     <style>
+        body{
+            background-image:url("images/photo_2017-03-05_21-44-31.jpg");
+        
+        }
+        div.transbox {
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.8;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.transbox p {
+    margin: 5%;
+    font-weight: bold;
+    color: black;
+}
+     </style>
 </head>
 
 <body >
@@ -22,6 +41,7 @@ wisest of counselors, and the most patient of teachers."</p>
 </section>
 
 <aside>
+ <div class="transbox">
 <form class="col-sm-6 auth-form">
                         <h3>New User</h3>
                         <div class="form-group">
@@ -50,8 +70,10 @@ wisest of counselors, and the most patient of teachers."</p>
                             </div>
                         <div class="form-group">
                             <button class="btn btn-success form-control">Sign In</button>
-                        </div>    
+                        </div>  
+                        </div>  
                     </form>
+
 </aside>
 
 
