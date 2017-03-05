@@ -18,6 +18,11 @@ nav{
 
 
 }
+aside{
+	width: 30%;
+	height: 600px;
+	float: right;
+}
 body{
             background-color:white;
             background-size: cover;
@@ -41,10 +46,12 @@ body{
        }
 
        section{
-           height: 100px;
-           width: 100%;
-           float: left;
-           text-align: center;
+           background-image:url("images/photo_2017-03-05_21-44-31.jpg");
+           height:100%;
+           width:70%;
+          float:left;
+           
+        
 
 
        }
@@ -54,7 +61,7 @@ body{
     margin-right: auto;
     border: 1px solid black;
     padding: 20px;
-    background-image: url("images/books.jpg");
+    background-color: rosybrown;
 }
 
 .dropbtn {

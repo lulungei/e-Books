@@ -19,7 +19,9 @@
 wisest of counselors, and the most patient of teachers."</p>
 
 <p>-Charles William Elliot</p>
+</section>
 
+<aside>
 <form class="col-sm-6 auth-form">
                         <h3>New User</h3>
                         <div class="form-group">
@@ -50,7 +52,7 @@ wisest of counselors, and the most patient of teachers."</p>
                             <button class="btn btn-success form-control">Sign In</button>
                         </div>    
                     </form>
-</section>
+</aside>
 
 
 
