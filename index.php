@@ -4,7 +4,8 @@
 <head>
        
     <title>e-Books</title>  
-    <link href="styles.css" rel="stylesheet">  
+    <link href="styles.css" rel="stylesheet"> 
+    <link href="validate.js" rel="stylesheet">  
 </head>
 
 <body >
