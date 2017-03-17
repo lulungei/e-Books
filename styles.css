@@ -44,6 +44,12 @@ body{
            font-size: 25px;
 
        }
+       h1{
+           font-family: "Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif";
+           text-align: center;
+           font-size:30px;
+
+       }
 
        .auth-form{   
     width: 400px;
