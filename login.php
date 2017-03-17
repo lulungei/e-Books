@@ -52,7 +52,9 @@
     </div>
   </div>
 </nav>
-
+<br/>
+<br/>
+<br/>
 <div class="slideshow-container">
   <div class="mySlides fade">
     <div class="numbertext">1 / 4</div>
