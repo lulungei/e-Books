@@ -30,7 +30,6 @@ div.transbox p {
 <body >
 <header>
 
-<a href= "login.php">Login</a>
 </header>
 <section>
 <h1> Books<h2>
@@ -44,10 +43,10 @@ wisest of counselors, and the most patient of teachers."</p>
  <div class="transbox">
 <form class="col-sm-6 auth-form">
                         <h3>New User</h3>
-                        <div class="form-group">
-                            <label>Name</label>
-                            <input name="name" type="text" class="form-control" placeholder="Enter your name" required>
-                        </div>
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input name="name" type="text" class="form-control" placeholder="Enter your name" required>
+                            </div>
                         <div class="form-group">
                             <label>E-mail</label>
                             <input name="E-mail" type="text" class="form-control" placeholder="Enter your E-mail address" required>
