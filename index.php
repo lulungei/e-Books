@@ -25,6 +25,8 @@
     filter: alpha(opacity=60); 
     margin-right:auto;
     margin-left:auto;
+    width:400px;
+    height:300px;
 }
 
 div.transbox p {
