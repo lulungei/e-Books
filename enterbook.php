@@ -16,10 +16,8 @@
 <body>
 <?php
          if(isset($_POST['add'])) {
-            $dbhost = 'localhost:8000';
-            $dbuser = 'root';
-            $dbpass = 'rootpassword';
-            $conn = mysql_connect($dbhost, $dbuser, $dbpass, "ebooks");
+            
+            $db = mysqli_connect("localhost","root","","ebooks") or die("Database connection failed");
             
             if(! $conn ) {
                die('Could not connect: ' . mysql_error());
@@ -44,7 +42,7 @@
             $sql = "INSERT INTO books ". "(title, genre, author, 
                year) ". "VALUES('','','','' NOW())";
                
-            mysql_select_db("$con 'ebooks'");
+            mysql_select_db("$conn 'ebooks'");
             $retval = mysql_query( $sql, $conn );
             
             if(! $retval ) {
