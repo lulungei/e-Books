@@ -19,40 +19,34 @@
             
             $db = mysqli_connect("localhost","root","","ebooks") or die("Database connection failed");
             
-            if(! $conn ) {
-               die('Could not connect: ' . mysql_error());
+            if(! $db ) {
+               die('Could not connect: ' . mysqli_error($db));
             }
             
-            if(! get_magic_quotes_gpc() ) {
-               $title = addslashes ($_POST['title']);
-               $genre = addslashes ($_POST['genre']);
-               $author = addslashes ($_POST['author']);
-               $year = addslashes ($_POST['year']);
+            $title = mysqli_real_escape_string($db, $_POST['title']);
+            $genre = mysqli_real_escape_string($db, $_POST['genre']);
+            $author = mysqli_real_escape_string($db, $_POST['author']);
+            $year = (int) $_POST['year'];
 
-            }else {
-               $title = $_POST['title'];
-               $genre = $_POST['genre'];
-                $author = $_POST['author'];
-                 $year= $_POST['year'];
+            $sql = "INSERT INTO books ". "(title, genre, author, 
+               year) ". "VALUES('$title','$genre','$author', $year)";
+               
+            //mysql_select_db("$conn 'ebooks'");
+            $retval = mysqli_query( $db, $sql );
+            
+            if(!$retval ) {
+               die('Could not enter data: ' . mysqli_error($db));
+            }
+            else{
+                echo "Entered data successfully\n";
+                
+                mysqli_close($db);
             }
          }
             
            
             
-            $sql = "INSERT INTO books ". "(title, genre, author, 
-               year) ". "VALUES('','','','' NOW())";
-               
-            mysql_select_db("$conn 'ebooks'");
-            $retval = mysql_query( $sql, $conn );
             
-            if(! $retval ) {
-               die('Could not enter data: ' . mysql_error());
-            }
-            else{
-            echo "Entered data successfully\n";
-            
-            mysql_close($conn);
-         }
             ?>
 
 <div class="container">
@@ -72,9 +66,9 @@
         </div>
         <div class="form-group">
             <label class="sr-only" for="author">Published</label>
-            <input type="year" type="text" class="form-control" id="year" placeholder="Enter year of publication">
+            <input name="year" type="number" class="form-control" id="year" placeholder="Enter year of publication">
         </div>
-        <button type="submit" class="btn btn-default" >Enter</button>
+        <button name="add" type="submit" class="btn btn-default" >Enter</button>
     </form>
 
 

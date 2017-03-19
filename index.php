@@ -161,6 +161,9 @@ span.psw {
 }
 
 </style>
+<?php 
+include 'userhandler.php';
+?>
 
 <body>
 <div class="transbox">
@@ -200,7 +203,7 @@ span.psw {
 
 <div id="id02" class="modal2">
   <p><b>New User</b></p>
-  <form class="modal-content animate" action="signup.php">
+  <form class="modal-content animate" action="<?php $_PHP_SELF ?>" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="images/book.jpg" alt="Avatar" class="avatar">
@@ -209,13 +212,13 @@ span.psw {
     <div class="container">
 
         <label><b>email</b></label>
-        <input type="text" placeholder="enter your email" name="email" required>
+        <input type="text" placeholder="Enter your email" name="email" required>
 
       <label><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <input type="text" placeholder="Enter Username" name="username" required>
 
       <label><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" placeholder="Enter Password" name="password" required>
 
       <label><b>Re-enter password</b></label>
       <input type="password" placeholder="Re-enter password" name="psw-repeat" required>
@@ -263,6 +266,7 @@ window.onclick = function(event) {
 
 
 </section>
+
 
 <aside>
  

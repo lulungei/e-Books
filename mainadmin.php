@@ -68,7 +68,7 @@ p{
       <li><a href="enterbook.php">Enter New Book</a></li>
       <li><a href="#">Edit Book Details</a></li>
       <li><a href="#">Display Users</a></li>
-      <li><a href="#">Display Books</a></li>
+      <li><a href="displaybooks.php">Display Books</a></li>
       <li><a href="#">Delete Book</a></li>
     </ul>
   </div>
