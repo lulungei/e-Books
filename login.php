@@ -35,10 +35,10 @@
   <div class="dropdown">
     <button class="dropbtn">Genre</button>
     <div class="dropdown-content">
-      <a href="#">Thriller</a>
-      <a href="#">Romance</a>
-      <a href="#">Biography</a>
-      <a href="#">Drama</a>
+      <a href="thriller.php">Thriller</a>
+      <a href="romance.php">Romance</a>
+      <a href="biography.php">Biography</a>
+      <a href="drama.php">Drama</a>
     </div>
   </div>
   
