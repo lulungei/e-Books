@@ -8,7 +8,7 @@ this script is used to restrict access to admin users
 
 require_once "session.php";
 
-if (!login_check_admin) {
+if (!login_check_admin()) {
     header('Location: index.php');
     die();
 }

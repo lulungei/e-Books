@@ -8,7 +8,7 @@ this script is used to restrict access to only logged-in users
 
 require_once 'session.php';
 
-if (!login_check) {
+if (!login_check()) {
     // redirect to home page
     header('Location: index.php');
     die();

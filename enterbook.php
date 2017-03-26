@@ -57,7 +57,7 @@ require_once "require_admin.php";
     <h2>Enter New Books</h2>
      <form method = "post" action = "<?php $_PHP_SELF ?>" class="form-inline">
         <div class="form-group">
-            <label class="sr-only" for="author">author</label>
+            <label class="sr-only" for="author">Author</label>
             <input name="author" type="text"class="form-control" id="author" placeholder="Enter name of author">
         </div>
         <div class="form-group">

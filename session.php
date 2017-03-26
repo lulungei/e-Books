@@ -35,14 +35,13 @@ function login_clear () {
  * @param $user array|null user map or null if user not logged in
  */
 function login_user ($user) {
-    $login = login_get();
-    if(!$login) return null;
-
-    $login["user_id"] = $user["id"];
-    $login["username"] = $user["username"];
+    $_SESSION['login'] = [];
+    $login = $_SESSION['login'];
+    $_SESSION['login']["user_id"] = $user["id"];
+    $_SESSION['login']["username"] = $user["username"];
     // arbitrary data can be added to the session and linked
     // to the current user
-    $login["data"] = [];
+    $_SESSION['login']["data"] = [];
 }
 
 /**
@@ -76,8 +75,8 @@ function login_check_admin () {
  * if user is not logged in
  */
 function login_set_data ($key, $data) {
-   if($login = login_get()) {
-       $login["data"][$key] = $data;
+   if(login_check()) {
+       $_SESSION['login']["data"][$key] = $data;
        return true;
    }
    return false;
@@ -90,9 +89,9 @@ function login_set_data ($key, $data) {
  * @return mixed the stored data or null if it was not found
  */
 function login_get_data ($key) {
-    if($login = login_get()) {
-        if(isset($login["data"][$key])) {
-            return $login[$key];
+    if(login_check()) {
+        if(isset($_SESSION['login']["data"][$key])) {
+            return $_SESSION['login'][$key];
         }
     }
     return null;
@@ -104,8 +103,8 @@ function login_get_data ($key) {
  */
 function login_unset_data ($key) {
     if($login = login_get()) {
-        if (isset($login["data"][$key])) {
-            unset($login["data"][$key]);
+        if (isset($_SESSION['login']["data"][$key])) {
+            unset($_SESSION['login']["data"][$key]);
         }
     }
 }
