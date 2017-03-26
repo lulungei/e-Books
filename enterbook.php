@@ -1,3 +1,9 @@
+<?php
+
+require_once "connect.php";
+require_once "require_admin.php";
+
+?>
 <!doctype html>
 <html>
 <head>
@@ -16,8 +22,6 @@
 <body>
 <?php
          if(isset($_POST['add'])) {
-            
-            $db = mysqli_connect("localhost","root","","ebooks") or die("Database connection failed");
             
             if(! $db ) {
                die('Could not connect: ' . mysqli_error($db));

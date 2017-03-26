@@ -9,7 +9,7 @@ if(isset($_POST['add'])) {
 
 $username = mysqli_real_escape_string($db, $_POST['username']);
 $email = mysqli_real_escape_string($db, $_POST['email']);
- $password = mysqli_real_escape_string($db, $_POST['password']);
+$password = mysqli_real_escape_string($db, $_POST['password']);
   
 
 // hash the password for security

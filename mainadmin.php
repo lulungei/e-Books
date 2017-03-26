@@ -1,3 +1,8 @@
+<?php
+
+require_once "require_admin.php";
+
+?>
 <!doctype html>
 <html>
 <head>

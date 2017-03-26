@@ -1,3 +1,7 @@
+<?php
+require_once "connect.php";
+require_once "require_admin.php";
+?>
 <!doctype html>
 <html>
 <head>
@@ -13,8 +17,6 @@
 <head>
 <body>
 <?php
-//create connection 
-$db = mysqli_connect("localhost","root","","ebooks") or die("Database connection failed");
 
 $sql = "SELECT title, genre, author, year FROM books";
 $result = $db->query($sql);
