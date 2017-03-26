@@ -211,12 +211,14 @@ include 'userhandler.php';
 
     <div class="container">
 
-        <label><b>email</b></label>
+        <label><b>Email</b></label>
         <input type="text" placeholder="Enter your email" name="email" required>
 
       <label><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="username" required>
 
+      <label><b>Phone</b></label>
+      <input type="text" placeholder="Enter Phone (+2547...)" name="phone" required>
       <label><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="password" required>
 
