@@ -22,10 +22,12 @@ function login_get () {
 
 /**
  * logs in the specified user
- * @param $user array user object hash
+ * @param $user array|null user map or null if user not logged in
  */
 function login_user ($user) {
     $login = login_get();
+    if(!$login) return null;
+    
     $login["user_id"] = $user["id"];
     $login["username"] = $user["username"];
     // arbitrary data can be added to the session and linked
