@@ -90,7 +90,7 @@ function login_set_data ($key, $data) {
  * @return mixed the stored data or null if it was not found
  */
 function login_get_data ($key) {
-    if($login = login_get() {
+    if($login = login_get()) {
         if(isset($login["data"][$key])) {
             return $login[$key];
         }
@@ -105,7 +105,7 @@ function login_get_data ($key) {
 function login_unset_data ($key) {
     if($login = login_get()) {
         if (isset($login["data"][$key])) {
-            unset($login["data"][$key])
+            unset($login["data"][$key]);
         }
     }
 }

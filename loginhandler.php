@@ -10,9 +10,9 @@ $q = "SELECT * FROM users WHERE username='$username'";
 $res = mysqli_query($db, $q) or die("Database Error:" . mysqli_error($db));
 $user = mysqli_fetch_assoc($res);
 
-if($user && password_verify($password, $user["password"]){
+if($user && password_verify($password, $user["password"])){
     // login the user and redirect to admin or main home page depending on role
-    login($user);
+    login_user($user);
     if($user["role"] == "admin"){
         header("Location: mainadmin.php");
         die();

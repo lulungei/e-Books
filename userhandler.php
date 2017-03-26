@@ -11,9 +11,9 @@ $username = mysqli_real_escape_string($db, $_POST['username']);
 $email = mysqli_real_escape_string($db, $_POST['email']);
 $phone = mysqli_real_escape_string($db, $_POST['phone']);
 $password = $_POST['password'];
-$repeatPass = $_POST['repeat-password'];
+$passwordRepeat = $_POST['password-repeat'];
 
-if($password != $repeatPass) {
+if($password != $passwordRepeat) {
    die("<b>Passwords don't match</b> <a href='index.php'>Back to login.</a>");
 }
 
@@ -29,11 +29,14 @@ $role = 'ordinary';
 // prepare the insert statement
 
 $query ="INSERT INTO users (role, username, email, phone, password) VALUES".
-        "('$role', $username', '$email', '$phone', '$securePassword')";
+        "('$role', '$username', '$email', '$phone', '$securePassword')";
 
 // run the query in the database
  
 
 mysqli_query($db, $query) or die(mysqli_error($db));
+
+// process the form through the login handler to login the user after signup automatically
+require "loginhandler.php";
 }
 ?>

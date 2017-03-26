@@ -177,7 +177,7 @@ include 'userhandler.php';
 
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="loginhandler.php">
+  <form class="modal-content animate" action="loginhandler.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="images/book.jpg" alt="Avatar" class="avatar">
@@ -226,7 +226,7 @@ include 'userhandler.php';
       <input type="password" placeholder="Re-enter password" name="password-repeat" required>
 
         
-      <button type="submit">Sign Up</button>
+      <button type="submit" name="add">Sign Up</button>
       <input type="checkbox" checked="checked"> Remember me
       <p>By creating an account you agree to our <a href="#">Terms&Privacy</a>.</p>
     </div>
