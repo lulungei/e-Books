@@ -203,7 +203,7 @@ include 'userhandler.php';
 
 <div id="id02" class="modal2">
   <p><b>New User</b></p>
-  <form class="modal-content animate" action="<?php $_PHP_SELF ?>" method="post">
+   <form class="modal-content animate" action="userhandler.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="images/book.jpg" alt="Avatar" class="avatar">
