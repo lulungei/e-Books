@@ -15,9 +15,9 @@ the cart array has the following structure
 ]
 
 an item is fetched from the card by its key, which is supposed to
-match the database primary key... the table that is looked up and
-the field that is used as the key are defined in the constants
-CART_ITEMS_TABLE and CART_ID_FIELD respectively. 
+match the database primary key... the table that is looked up is
+defined in the constant
+CART_ITEMS_TABLE. 
 
 when the card_get_item($itemId) or card_get_all_items() functions are called,
 data is fetched from the database and added to the result to give it the following
@@ -37,18 +37,17 @@ structure
 */
 
 require_once 'connect.php';
-session_start();
+require_once 'session.php';
 
 define("CART_ITEMS_TABLE", "books");
-define("CART_ID_FIELD", "title");
 
 /**
  * initialize cart array in session if
  * not already initialized
  */
 function cart_init () {
-    if(!isset($_SESSION['cart'])) {
-        $_SESSION['cart'] = [];
+    if(!login_get_data('cart')) {
+        login_set_data('cart', []);
     }
 }
 
@@ -56,7 +55,7 @@ function cart_init () {
  * removes all cart data from session
  */
 function cart_clear () {
-    unset($_SESSION['cart']);
+    login_unset_data("cart");
 }
 
 /**
@@ -66,7 +65,7 @@ function cart_clear () {
  */
 function cart_get() {
     cart_init();
-    return $_SESSION['cart'];
+    return login_get_data("cart");
 }
 
 /**
@@ -136,8 +135,7 @@ function cart_has_item ($itemId) {
 function cart_get_item_data ($itemId) {
     $itemId = mysqli_real_escape_string(db_connection(), $itemId);
     $table = CART_ITEMS_TABLE;
-    $idField = CART_ID_FIELD;
-    $q = "SELECT * FROM $table WHERE $idField=$itemId";
+    $q = "SELECT * FROM $table WHERE id=$itemId";
     $res = mysqli_query(db_connection(), $q) or die("Database error:". myqli_error(db_connection());
     return mysqli_fetch_assoc($res);
 }

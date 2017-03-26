@@ -21,13 +21,23 @@ function login_get () {
 }
 
 /**
+ * clear login data from the session, essentially
+ * logs out the user
+ */
+function login_clear () {
+    if(login_check()){
+        unset($_SESSION['login']);
+    }
+}
+
+/**
  * logs in the specified user
  * @param $user array|null user map or null if user not logged in
  */
 function login_user ($user) {
     $login = login_get();
     if(!$login) return null;
-    
+
     $login["user_id"] = $user["id"];
     $login["username"] = $user["username"];
     // arbitrary data can be added to the session and linked
@@ -86,4 +96,16 @@ function login_get_data ($key) {
         }
     }
     return null;
+}
+
+/**
+ * deletes specified data from the login session
+ * @param $key string
+ */
+function login_unset_data ($key) {
+    if($login = login_get()) {
+        if (isset($login["data"][$key])) {
+            unset($login["data"][$key])
+        }
+    }
 }
