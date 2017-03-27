@@ -91,7 +91,7 @@ function login_set_data ($key, $data) {
 function login_get_data ($key) {
     if(login_check()) {
         if(isset($_SESSION['login']["data"][$key])) {
-            return $_SESSION['login'][$key];
+            return $_SESSION['login']["data"][$key];
         }
     }
     return null;

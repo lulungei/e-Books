@@ -119,7 +119,6 @@ div.desc {
 </head>
 <body>
 <?php include "include/header.php" ?>
-
 <h1><?= htmlentities($genre) ?></h2>
 <?php while($book = mysqli_fetch_assoc($books)) { ?>
 
@@ -129,7 +128,7 @@ div.desc {
        <img src="<?= $book['image_path'] ?>" width="300" height="200">
        </a>
     <div class="desc">
-      <a href="add_to_cart?book=<?= urlencode($book["id"])?>" class="btn btn-info btn-lg">
+      <a href="add_to_cart.php?book=<?= urlencode($book["id"])?>&from_genre=<?= urlencode($genre)?>" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-shopping-cart"></span>Add To Cart
         </a>
     </div>

@@ -12,3 +12,9 @@
   </div>
 </div>
 </header>
+<?php if (isset($_GET['msg'])) {?>
+<script>
+    alert("<?= htmlentities($_GET[msg]) ?>");
+</script>
+
+<?php } ?>

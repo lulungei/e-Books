@@ -77,7 +77,7 @@ function cart_get() {
  */
 function cart_add_item ($itemId, $quantity = 1) {
     $cart = cart_get();
-    if (!isset($cart[$itemId]) {
+    if (!isset($cart[$itemId])) {
         $cart[$itemId] = $quantity;
     }
     else {
@@ -136,7 +136,7 @@ function cart_get_item_data ($itemId) {
     $itemId = mysqli_real_escape_string(db_connection(), $itemId);
     $table = CART_ITEMS_TABLE;
     $q = "SELECT * FROM $table WHERE id=$itemId";
-    $res = mysqli_query(db_connection(), $q) or die("Database error:". myqli_error(db_connection());
+    $res = mysqli_query(db_connection(), $q) or die("Database error:". myqli_error(db_connection()));
     return mysqli_fetch_assoc($res);
 }
 
