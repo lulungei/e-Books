@@ -161,9 +161,6 @@ span.psw {
 }
 
 </style>
-<?php 
-include 'userhandler.php';
-?>
 
 <body>
 <div class="transbox">

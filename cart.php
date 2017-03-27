@@ -14,12 +14,12 @@ the cart array has the following structure
     ...
 ]
 
-an item is fetched from the card by its key, which is supposed to
+an item is fetched from the cart by its key, which is supposed to
 match the database primary key... the table that is looked up is
 defined in the constant
 CART_ITEMS_TABLE. 
 
-when the card_get_item($itemId) or card_get_all_items() functions are called,
+when the cart_get_item($itemId) or cart_get_all_items() functions are called,
 data is fetched from the database and added to the result to give it the following
 structure
 
@@ -86,10 +86,10 @@ function cart_update($cart) {
 function cart_add_item ($itemId, $quantity = 1) {
     $cart = cart_get();
     if (!isset($cart[$itemId])) {
-        $cart[$itemId] = $quantity;
+        $cart[$itemId] = ["quantity" => $quantity];
     }
     else {
-        $cart[$itemId] += $quantity;
+        $cart[$itemId]["quantity"] += $quantity;
     }
     cart_update($cart);
 }
@@ -156,19 +156,19 @@ function cart_get_item_data ($itemId) {
  * @return array|null
  */
 function cart_get_item ($itemId) {
-    if (cart_has_item($itemId)) {
+    if (!cart_has_item($itemId)) {
         return null;
     }
     else {
         $item =  cart_get()[$itemId];
         // combine data from cart array with data from database
-        $item["data"] = card_get_item_data($itemId);
+        $item["data"] = cart_get_item_data($itemId);
         return $item;
     }
 }
 
 /**
- * get all the items from the card, each
+ * get all the items from the cart, each
  * item is an associative array including the quantity
  * and data from the database
  * @return array
@@ -176,9 +176,9 @@ function cart_get_item ($itemId) {
 function cart_get_all_items () {
     // get all item ids
     $itemIds = array_keys(cart_get());
-    // use the card_get_item function to transform the array of
+    // use the cart_get_item function to transform the array of
     // item id's to an array of their corresponding data and quantities
-    $items = array_map(card_get_item, $itemIds);
+    $items = array_map('cart_get_item', $itemIds);
     return $items;
 }
 
@@ -197,10 +197,11 @@ function cart_get_item_price ($item) {
  * @return number
  */
 function cart_get_total_price () {
-    $items = array_values(cart_get());
+    $itemIds = array_keys(cart_get());
+    $items = array_map('cart_get_item', $itemIds);
     // use the cart_get_item_price function to transform an array
     // of items into an array of their corresponding prices
-    $prices = array_map(cart_get_item_price, $items);
+    $prices = array_map('cart_get_item_price', $items);
     $total = array_sum($prices);
     return $total;
 }
