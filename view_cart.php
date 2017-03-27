@@ -48,7 +48,9 @@ require_once "cart.php";
         </tr>
     </table>
 
-    <button class="btn btn-lg btn-default">CHECKOUT</button>
+    <form method="post" action="checkouthandler.php">
+        <button class="btn btn-lg btn-default">CHECKOUT</button>
+    </form>
     
 </div>
 </body>
