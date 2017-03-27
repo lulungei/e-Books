@@ -37,15 +37,18 @@ require_once "cart.php";
             <td><?= $item['data']['author'] ?></td>
             <td><?= $item['quantity']?></td>
             <td><?= cart_get_item_price($item) ?></td>
-            <td><a href="#" class="btn btn-default">Remove</a></td>
+            <td><a href="remove_from_cart.php?item=<?= urlencode($item['data']['id']) ?>"
+                 class="btn btn-default">Remove</a></td>
         </tr>
         <?php } ?>
         <tr>
             <td colspan="3"><b>TOTAL</b></td>
             <td><b><?= cart_get_total_price() ?></b></td>
-            <td><a href="#" class="btn btn-default">Remove All</a></td>
+            <td><a href="remove_from_cart.php?item=all" class="btn btn-default">Empty Cart</a></td>
         </tr>
     </table>
+
+    <button class="btn btn-lg btn-default">CHECKOUT</button>
     
 </div>
 </body>
