@@ -69,6 +69,14 @@ function cart_get() {
 }
 
 /**
+ * updates the cart with the specified date
+ * @param $cart array
+ */
+function cart_update($cart) {
+    login_set_data('cart', $cart);
+}
+
+/**
  * add the specified quantity of the item to the cart
  * if the item is already in the cart, the quantity will be
  * increased by the specified amount
@@ -83,6 +91,7 @@ function cart_add_item ($itemId, $quantity = 1) {
     else {
         $cart[$itemId] += $quantity;
     }
+    cart_update($cart);
 }
 
 /**
@@ -114,6 +123,7 @@ function cart_remove_item ($itemId, $quantity = -1) {
     else {
         $cart[$itemId]["quantity"] = $newQuantity;
     }
+    cart_update($cart);
     
 }
 
@@ -165,7 +175,7 @@ function cart_get_item ($itemId) {
  */
 function cart_get_all_items () {
     // get all item ids
-    $itemIds = array_keys(card_get());
+    $itemIds = array_keys(cart_get());
     // use the card_get_item function to transform the array of
     // item id's to an array of their corresponding data and quantities
     $items = array_map(card_get_item, $itemIds);
