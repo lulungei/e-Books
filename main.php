@@ -8,20 +8,7 @@
 </head>
 
 <body>
-<header>
-<div class="dropdown">
-  <button class="dropbtn">Account</button>
-  <div class="dropdown-content">
-    <a href="logout.php">Logout</a>
-  </div>
-</div>
-<div class="dropdown">
-  <button class="dropbtn">Cart</button>
-  <div class="dropdown-content">
-    <a href="#">Show contents</a>
-  </div>
-</div>
-</header>
+
 
 <input type="text" name="search" placeholder="Author or Title or Year of Publication">
 <br/>
@@ -34,10 +21,10 @@
   <div class="dropdown">
     <button class="dropbtn">Genre</button>
     <div class="dropdown-content">
-      <a href="thriller.php">Thriller</a>
-      <a href="romance.php">Romance</a>
-      <a href="biography.php">Biography</a>
-      <a href="drama.php">Drama</a>
+      <a href="view_books.php?genre=Thriller">Thriller</a>
+      <a href="view_books.php?genre=Romance">Romance</a>
+      <a href="view_books.php?genre=Biography">Biography</a>
+      <a href="view_books.php?genre=Drama">Drama</a>
     </div>
   </div>
   

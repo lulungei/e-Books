@@ -70,7 +70,7 @@ p{
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Actions
     <span class="caret"></span></button>
     <ul class="dropdown-menu">
-      <li><a href="enterbook.php">Enter New Book</a></li>
+      <li><a href="manage_books.php">Manage Books</a></li>
       <li><a href="#">Edit Book Details</a></li>
       <li><a href="#">Display Users</a></li>
       <li><a href="displaybooks.php">Display Books</a></li>
