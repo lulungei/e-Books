@@ -161,9 +161,6 @@ span.psw {
 }
 
 </style>
-<?php 
-include 'userhandler.php';
-?>
 
 <body>
 <div class="transbox">
@@ -177,7 +174,7 @@ include 'userhandler.php';
 
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="login.php">
+  <form class="modal-content animate" action="loginhandler.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="images/book.jpg" alt="Avatar" class="avatar">
@@ -185,10 +182,10 @@ include 'userhandler.php';
 
     <div class="container">
       <label><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <input type="text" placeholder="Enter Username" name="username" required>
 
       <label><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" placeholder="Enter Password" name="password" required>
         
       <button type="submit">Login</button>
       <input type="checkbox" checked="checked"> Remember me
@@ -211,20 +208,22 @@ include 'userhandler.php';
 
     <div class="container">
 
-        <label><b>email</b></label>
+        <label><b>Email</b></label>
         <input type="text" placeholder="Enter your email" name="email" required>
 
       <label><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="username" required>
 
+      <label><b>Phone</b></label>
+      <input type="text" placeholder="Enter Phone (+2547...)" name="phone" required>
       <label><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="password" required>
 
       <label><b>Re-enter password</b></label>
-      <input type="password" placeholder="Re-enter password" name="psw-repeat" required>
+      <input type="password" placeholder="Re-enter password" name="password-repeat" required>
 
         
-      <button type="submit">Sign Up</button>
+      <button type="submit" name="add">Sign Up</button>
       <input type="checkbox" checked="checked"> Remember me
       <p>By creating an account you agree to our <a href="#">Terms&Privacy</a>.</p>
     </div>
