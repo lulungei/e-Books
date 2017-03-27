@@ -35,16 +35,6 @@ CREATE TABLE `books` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `books`
---
-
-LOCK TABLES `books` WRITE;
-/*!40000 ALTER TABLE `books` DISABLE KEYS */;
-INSERT INTO `books` VALUES (1,'A Human Element book 1','Thriller','Donna Gallanti',2012,150,NULL),(2,'A Human Element book 2','Thriller','Donna Galanti',2013,150,NULL),(3,'A Walk to Remember','Romance','Nicholas Sparks',1999,150,NULL),(4,'Angels and Demons','Thriller','Dan Brown',2000,150,NULL),(5,'Ellon Musk','Biography','Ashley Vance',2015,150,NULL),(6,'Gone Girl','Thriller','Gillian Flyn',2012,150,NULL),(7,'Hidden Figures','Biography','Margot Lee Shetterly',2016,150,NULL),(8,'If Tomorrow Comes','Drama','Sydney Sheldon',1985,150,NULL),(9,'Long Walk to Freedom','Biography','Nelson Mandela',1994,150,NULL),(10,'Pope Francis Untying the Knots','Biography','Paul Vallely',2013,150,NULL),(11,'Pride and Prejudice','Romance','Jane Austen',1813,150,NULL),(12,'Romeo and Juliet','Romance','William Shakespear',1597,150,NULL),(13,'Seventh Plague','Drama','James Rollins',2016,150,NULL),(14,'Stay Close','Drama','Harlan Coben',2000,150,NULL),(15,'The Gift','Drama','James Patterson',2010,150,NULL),(16,'The Notebook','Romance','Nicholas Sparks',1996,150,NULL),(17,'Some Title','Thriller','Some Author',1920,100,''),(18,'Another Title','Thriller','Another Book',2000,100,'uploads/bio1.jpg'),(19,'Test','Romance','Test',2000,100,'uploads/bio2.jpg');
-/*!40000 ALTER TABLE `books` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `users`
 --
 
@@ -65,16 +55,6 @@ CREATE TABLE `users` (
   UNIQUE KEY `phone_2` (`phone`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `users`
---
-
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'ordinary','habbes','habbes@mailer.com','$2y$10$g04u1OBD3ivlKRQZRP.yYuXDZnq3dYqBmHc3TA/HC1KgOPq0n3qwy','+254726166685'),(2,'admin','admin','admin@mailer.com','$2y$10$A5nOnQ10Jy1DkCbvBnebE.EGWvIOtKUna5qk/Y0PClmE2qoAOX6BS','+123456789');
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -85,4 +65,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-27  2:37:46
+-- Dump completed on 2017-03-27  3:44:22
